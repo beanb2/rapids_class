@@ -1,0 +1,142 @@
+---
+title: 'Stat 5810: Applied Research in ML/AI'
+output: pdf_document
+fontsize: 12pt
+header-incudes:
+  - \usepackage{amsmath}
+  - \usepackage{hyperref}
+  - \usepackage{url}
+  - \usepackage{float}
+---
+
+<!-- Help on header: -->
+<!-- - https://tex.stackexchange.com/questions/171711/how-to-include-latex-package-in-r-markdown -->
+<!-- Help on comments: -->
+<!-- - https://stackoverflow.com/questions/17046518/comment-out-text-in-r-markdown-rmd-file -->
+
+\vspace{-1cm}
+\begin{center}
+Section MSZ, Spring Semester 2025 \\
+\end{center}
+
+## Instructors
+\begin{tabular}{ll}
+\textbf{Name} & Brennan Bean (PhD), Kevin Moon (PhD), Thomas Kerby, and Kelvyn Bladen \\
+\textbf{Email} & brennan.bean@usu.edu; kevin.moon@usu.edu; \\
+& thomas.kerby@usu.edu; kelvyn.bladen@usu.edu \\
+\textbf{Office} & ANSC 202 (Bean) and ANSC 214 (Moon) \\
+\end{tabular}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Prerequisites
+\textit{Instructor permission}
+
+## Course Materials 
+\textbf{Textbook}: \textit{Geocomputation with R} by Robin Lovelace (\url{https://r.geocompx.org/})
+
+Additional supplementary materials will be provided in Canvas or GitHub as necessary. Note that the online version of the textbook, which is the version you are encouraged to use, is free. While this textbook discusses geocomputation in R, it is very likely that much of the work in this course will be completed using Python. 
+
+## Introduction
+
+Undergraduate students will work with two PhD students (Thomas Kerby and Kelvyn Bladen) on a real-world problem: using machine learning to detect river rapids using satellite images via machine. This course will focus on collecting training data and then fitting machine learning models to identify rapids. The course will culminate in a final model or set of models suitable for deployment by the U.S. Geological Survey in rapid identification. 
+
+After finishing this class, students should be able to:
+ 
+\begin{enumerate}
+\item Implement the entire data modeling lifecycle (from data collection, to model training, to model deployment) on a real research problem.
+\item Understand the principles of geocomputation as applied to real research problems. 
+\item Understand how to work independently on a real data project both individually and in groups. 
+\item Understand how to use version control to coordinate software development with other people on large and complex programming tasks. 
+\end{enumerate}
+
+## Software
+Students must have a laptop capable of running R and Python, which they should bring to each class session. It is expected that all students will be using a current version of R and Python (installed within the last year) and will be using updated versions of all software packages relevant to both languages. 
+
+## Grades
+Final scores in this course will be determined by the number of points earned divided by 1000. Thus, each 10 points on an assignment, regardless of category, represents 1% of your final score. The following grade scale is guaranteed, but the instructors reserve the right to adjust this grade scale in favor of the students if necessary. \textbf{Note that this grade scale contains no + or - designations.} This means that a 91\% is an A, not an A- and an 89\% is a B, not a B+, in this course. A breakdown of points is given in the following sub-sections.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+Percent	& Grade \\
+\hline
+90-100 & 	A	\\
+80-89.9	& B \\	
+70-79.9	& C	\\	
+60-69.9 &	D \\
+0-59.9 & F \\
+\hline
+\end{tabular}
+\end{table}
+
+### Attendance (350 points)
+
+This class is an extended group project. This makes your regular attendance critical to the collective success of the course. As such, you are required to attend all course sessions. Students are allotted four "excused" absences for emergencies or other unavoidable circumstances. Any absences beyond the four excused absences will result in a 100 point deduction to your attendance score (maximum deduction of 350 points).
+
+The four excused absences are intended to cover family emergencies, illness, and university excused absences. This means that, should a student have to miss for a university excused absence, they only have THREE remaining excused absences for the semester, not four. Please talk to the instructor during the first week if you anticipate having more than three university-excused absences during the semester. 
+
+### Final Project (300 points)
+
+This class culminates in a deploy-able machine learning model (or set of models) suitable for presentation at USU's Student Research Symposium and/or in other regional or national level conferences. Students will work in groups of 2-3 on collecting relevant data and developing relevant models as overseen by a PhD student mentor. Each student will be required to make regular contributions to the project, hosted on GitHub, and will be required to continually improve their work based on multiple rounds of feedback from both the PhD student and the instructors. 
+
+### Conference Presentation (100 points)
+
+Students will be required to attend and present the results of their work at USU's student research symposium. Options may be available for students to present at other venues external to USU.   
+
+### Research Journal (150 points)
+
+Each student will be required to keep track of their progress in a research journal. This journal should include 1-2 paragraphs of reflection for every day you work on the project (minimum of 3 entries per week). Things to write about may include (1) what you worked on that day, (2) what you learned, (3) what you tried that didn't work, and (4) next steps or action items. These research journals will start once the group projects begin and you will be required to submit draft copies of the journal multiple times during the semester. 
+
+### In-class assignments (100 points)
+
+During the first 3-4 weeks of the semester there will be a series of in-class and/or take home assignments designed to teach you the principles of geocomputation and machine learning, as well as some background on the problem and working with the U.S. Geological Survey and the National Parks Service. These assignments are based on completion and can be submitted during or after class. Your lowest score in this assignment category will be dropped. 
+
+### Experience Cache Valley (10 points extra credit)
+Students have the option to participate in an activity unrelated to the coursework in or immediately surrounding Cache Valley and write about their experience. \textbf{Note that the report must be submitted within two weeks of the completed activity.} See Canvas for assignment details.
+
+## Instructor Commitments
+This course will be primarily administered by the two PhD Student mentors. Faculty involvement will be substantial in the first few weeks, but will transition to more of a supervisory role as you begin to work on your projects with your mentors. As such, most of your course communications will likely best suited for your PhD mentor, whose contact information is provided at the top of this syllabus. That in mind, you are always welcome to communicate with the course instructors as needed. 
+
+When communicating with mentors or instructors, please remember that all of us have research projects we are working on outside of this project. This means that we must carefully partition our time so that we can provide quality instruction and timely feedback without sacrificing our other research responsibilities or personal life. For this reason, you can expect to receive a response to emails or Canvas discussion threads within one business day, but we may not respond to your requests over the weekend.
+
+## Student Expectations 
+
+### Working Independently
+This course is unique in the opportunity it provides you to work on a project independently over an extended period of time. It is designed to mimic the type of experiences you may have engaging in applied research during graduate school. Unlike a regular class, the instructor or the PhD mentors will not be able to outline every step to solve a problem. You will need to learn how to read materials on your own, seek solutions independently, and manage project milestones effectively.
+
+### Course Communication
+Students are responsible for all information presented in class and are responsible to regularly check Canvas for announcements, due dates, and other communications from the instructors and mentors. Note that communications will be a combination of regular emails and Canvas emails/announcements in order to accomodate communications with our external project partners.  
+
+### Academic Honesty
+In this course, cheating is defined as \textbf{any attempt made by a student to deceive the instructor} in the representation of their work. This definition includes all forms of plagiarism, including copying code from other sources or people without attribution. It is natural and encouraged to take programming ideas and code snippets from online sources or chatGPT. However, when this occurs, \textbf{be sure to acknowledge the source of your information in your program comments.} Any observed instances of cheating will be reported to the University and potentially warrants failure from the course.
+
+## IDEA Objectives 
+The university using the IDEA learning objectives to measure the effectiveness of courses. Of the 13 pre- defined learning objectives, the ones most relevant to this course include:
+\begin{itemize}
+\item	(3) Learning to apply course material (to improve thinking, problem solving, and decisions)
+\item (5) Acquiring skills in working with others as a member of a team
+\item (9) Learning how to find, evaluate, and use resources to explore a topic in depth
+\item (13) Learning appropriate methods for collecting, analyzing, and interpreting numerical information
+\end{itemize}
+
+## Disclaimer
+This is a new course running in a unique format and may require mid-semester adjustments. As such, the instructor reserves the right to make minor changes to this syllabus as needed throughout the semester. No change in the syllabus will be made without first advertising the proposed change to the students. Students will be given 2-3 days to review any changes and provide comments/objections to the instructor before any change is executed. 
+
+## University Resources 
+
+### Disability Resource Center
+USU Welcomes students with disabilities. If students have, or suspect they may have, a physical, mental health, or learning disability that may require accommodations in this course, please contact the Disability Resource Center (DRC) as early in the semester as possible (University Inn #101, 435-797-2444, drc@usu.edu, \url{usu.edu/drc}). All disability-related accommodations must be approved by the DRC. Once approved, the DRC will coordinate with faculty to provide accommodations.
+
+### Office of Equity
+USU strives to provide an environment for students and employees that is free from discrimination or harassment, including sexual misconduct. Should students experience harassment or discrimination at any point during the semester inside or outside of class, please reach out to the instructor or to USU’s Office of Equity (Old Main #161, 435-797-1266, titleix@usu.edu, \url{equity.usu.edu}). As a responsible employee, the instructor is required to share information about any instances of sexual misconduct (sexual harassment, sexual assault, relationship violence (dating and domestic violence, or stalking) with the Office of Equity so that students can get connected to support and reporting resources. Students can learn more about the USU resources available for individuals who have experienced sexual misconduct at \url{sexualassault.usu.edu}.
+
+### CAPS
+Mental health is critically important for the success of USU students. As a student, you may experience a range of issues that can cause barriers to learning, such as strained relationships, increased anxiety, alcohol/drug problems, feeling down, difficulty concentrating and/or lack of motivation. These mental health concerns or stressful events may lead to diminished academic performance or reduce your ability to participate in daily activities. Utah State University provides free services for students to assist them with addressing these and other concerns. You can learn more about the broad range of confidential mental health services available on campus at Counseling and Psychological Services (CAPS).
+
+Students are also encouraged to download the “SafeUT App” to their smartphones. The SafeUT application is a 24/7 statewide crisis text and tip service that provides real-time crisis intervention to students through texting and a confidential tip program that can help anyone with emotional crises, bullying, relationship problems, mental health, or suicide related issues.
+
+
+
